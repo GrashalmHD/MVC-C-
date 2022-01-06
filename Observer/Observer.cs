@@ -2,8 +2,8 @@ using System;
 
 namespace ObserverPattern
 {
-    abstract class Observer
+    interface Observer
     {
-        public abstract void getNotification(object Sender, string message, object data);
+        public void getNotification(object Sender, string message, object data);
     }
 }
