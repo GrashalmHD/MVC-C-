@@ -1,4 +1,7 @@
 ﻿using System;
+using Model;
+using View;
+using Controller;
 
 namespace MVC
 {
@@ -6,7 +9,15 @@ namespace MVC
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            IView view = new TestView();
+            IModel model = new TestModel();
+            
+            IController controller = new TestController(model,view);
+
+            controller.start();
+
+            Console.WriteLine("End of software");
+            Console.ReadLine();
         }
     }
 }

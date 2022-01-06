@@ -6,16 +6,18 @@ namespace ObserverPattern
     public delegate void observer(object Sender,string message, object data);
 
     abstract class Observable{
-        observer observers;
+        List<Observer> observers = new List<Observer>();
 
-        public void subscribe(observer o){
-            observers += o;
+        public void addObserver(Observer o){
+            observers.Add(o);
         }
-        public void unsubscribe(observer o){
-            observers -= o;
+        public void removeObserver(Observer o){
+            observers.Remove(o);
         }
-        public void notifyObservers(object Sender, string message, object data){
-            observers(Sender,message,data);
+        public void notifyObservers(object sender, string message, object data){
+            foreach(Observer o in observers){
+                o.getNotification(sender,message,data);
+            }
         }
     }
 }
