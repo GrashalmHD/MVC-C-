@@ -1,8 +1,11 @@
 using System;
+using ObserverPattern;
 
 namespace View
 {
-    interface IView{
+
+    //Generic View Interface
+    interface IView : Observer{
         
     }   
 }
