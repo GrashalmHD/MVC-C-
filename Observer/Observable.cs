@@ -3,8 +3,6 @@ using System.Collections.Generic;
 
 namespace ObserverPattern
 {
-    public delegate void observer(object Sender,string message, object data);
-
     abstract class Observable{
         List<Observer> observers = new List<Observer>();
 
