@@ -1,6 +1,6 @@
 using System;
 
-namespace Observer
+namespace ObserverPattern
 {
     abstract class Observer
     {

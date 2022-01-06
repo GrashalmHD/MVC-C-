@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace Observer
+namespace ObserverPattern
 {
     public delegate void observer(object Sender,string message, object data);
 
